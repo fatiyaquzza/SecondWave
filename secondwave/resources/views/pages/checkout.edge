@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+  <title>SecondWave || Checkout </title>
+  @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
+<body class="font-primary bg-white">
+
+    <nav class="bg-[#757575] border-gray-200 dark:bg-gray-900">
+        <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4">
+          <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="{{asset('/resources/images/SecondWave.png')}}" class="h-4" alt="Flowbite Logo" />
+          </a>
+          <div class="flex flex-grow ml-4">
+            <input type="text" class="border border-gray-300 bg-white rounded-lg py-2 px-4 focus:outline-none focus:border-gray-300" placeholder="Search..." />
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-lg ml-2 hover:bg-blue-600">Search</button>
+          </div>
+          <div class="flex items-center space-x-4">
+            <!-- Icon keranjang -->
+            <a href="/cart" class="text-white hover:text-gray-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32.402" height="32" viewBox="0 0 32.402 32" id="cart"><path d="M6 30a2 2 1080 1 0 4 0 2 2 1080 1 0-4 0zm18 0a2 2 1080 1 0 4 0 2 2 1080 1 0-4 0zM-.058 5a1 1 0 0 0 1 1H3.02l1.242 5.312L6 20c0 .072.034.134.042.204l-1.018 4.58A.997.997 0 0 0 6 26h22.688a1 1 0 0 0 0-2H7.248l.458-2.06c.1.016.19.06.294.06h18.23c1.104 0 1.77-.218 2.302-1.5l3.248-9.964C32.344 8.75 31.106 8 30 8H6c-.156 0-.292.054-.438.088l-.776-3.316A1 1 0 0 0 3.812 4H.942a1 1 0 0 0-1 1zm6.098 5h23.81l-3.192 9.798c-.038.086-.07.148-.094.19-.066.006-.17.012-.334.012H8v-.198l-.038-.194L6.04 10z"></path></svg>
+            </a>
+            <!-- Icon chat -->
+            <a href="/chat" class="text-white hover:text-gray-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 96 96" id="chat"><path stroke="#000" stroke-linejoin="round" stroke-width="5" d="M9 24.5C9 19.5294 13.0294 15.5 18 15.5H78C82.9706 15.5 87 19.5294 87 24.5V57.1392C87 62.1098 82.9706 66.1392 78 66.1392H45.0658C44.3969 66.1392 43.756 66.4073 43.2862 66.8834L29.198 81.1624C27.628 82.7537 24.9184 81.642 24.9184 79.4066V68.6392C24.9184 67.2585 23.7991 66.1392 22.4184 66.1392H18C13.0294 66.1392 9 62.1098 9 57.1392V24.5Z"></path><circle cx="33" cy="42" r="4" fill="#000"></circle><circle cx="48" cy="42" r="4" fill="#000"></circle><circle cx="63" cy="42" r="4" fill="#000"></circle></svg>
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="font-poppins bg-gray-100">
+        <div class="flex max-sm:flex-col gap-4 h-full">
+          <div class="bg-stone-400 sm:h-screen sm:sticky sm:top-0 lg:min-w-[350px] sm:min-w-[300px]">
+            <div class="relative h-full">
+              <div class="p-4 sm:overflow-auto sm:h-[calc(100vh-60px)]">
+                <div class="space-y-4">
+  
+                  <div class="flex items-start gap-4">
+                    <div class="w-32 h-28 max-lg:w-24 max-lg:h-24 flex p-2 shrink-0 bg-gray-300 rounded-md">
+                        <img src="{{asset('/resources/images/parfume2.png')}}" class="w-20 h-24 mx-auto rounded-lg "/>
+                    </div>
+                    <div class="w-full">
+                      <h3 class="text-base text-white">Shanilla Parfume</h3>
+                      <ul class="text-xs text-gray-300 space-y-1 mt-2">
+                        <li class="flex flex-wrap gap-4">Size <span class="ml-auto">S</span></li>
+                        <li class="flex flex-wrap gap-4">Quantity <span class="ml-auto">1</span></li>
+                        <li class="flex flex-wrap gap-4">Total Price <span class="ml-auto">Rp120.000</span></li>
+                      </ul>
+                    </div>
+                  </div>
+  
+                  <div class="flex items-start gap-4">
+                    <div class="w-32 h-28 max-lg:w-24 max-lg:h-24 flex p-2 shrink-0 bg-gray-300 rounded-md">
+                        <img src="{{asset('/resources/images/tshirt3.png')}}" class="w-42 h-24 mx-auto rounded-lg" />
+                    </div>
+                    <div class="w-full">
+                      <h3 class="text-base text-white">Rucas T-shirt</h3>
+                      <ul class="text-xs text-gray-300 space-y-1 mt-2">
+                        <li>Size <span class="float-right">M</span></li>
+                        <li>Quantity <span class="float-right">1</span></li>
+                        <li>Total Price <span class="float-right">Rp150.000</span></li>
+                      </ul>
+                    </div>
+                  </div>
+  
+                  <div class="flex items-start gap-4">
+                    <div class="w-32 h-28 max-lg:w-24 max-lg:h-24 flex p-2 shrink-0 bg-gray-300 rounded-md">
+                        <img src="{{asset('/resources/images/bag.png')}}" class="w-42 h-24 mx-auto rounded-lg" />
+                    </div>
+                    <div class="w-full">
+                      <h3 class="text-base text-white">Goddie Bag</h3>
+                      <ul class="text-xs text-gray-300 space-y-1 mt-2">
+                        <li>Size <span class="float-right">Small</span></li>
+                        <li>Quantity <span class="float-right">1</span></li>
+                        <li>Total Price <span class="float-right">Rp235.000</span></li>
+                      </ul>
+                    </div>
+                  </div>
+  
+                  <div class="flex items-start gap-4">
+                    <div class="w-32 h-28 max-lg:w-24 max-lg:h-24 flex p-2 shrink-0 bg-gray-300 rounded-md">
+                        <img src="{{asset('/resources/images/nike.png')}}" class="w-42 h-24 mx-auto rounded-lg" />
+                    </div>
+                    <div class="w-full">
+                      <h3 class="text-base text-white">Nike AirForce</h3>
+                      <ul class="text-xs text-gray-300 space-y-1 mt-2">
+                        <li>Size <span class="float-right">37</span></li>
+                        <li>Quantity <span class="float-right">1</span></li>
+                        <li>Total Price <span class="float-right">Rp200.000</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="md:absolute md:left-0 md:bottom-0 bg-[#757575] w-full p-4">
+                <h4 class="flex flex-wrap gap-4 text-base text-white">Total <span class="ml-auto">Rp705.000</span></h4>
+              </div>
+            </div>
+          </div>
+  
+          <div class="max-w-4xl mx-auto w-full h-max rounded-md p-4 sticky top-0">
+            <h2 class="text-xl font-bold text-gray-800">Complete your order</h2>
+            <form class="mt-8">
+              <div>
+                <h3 class="text-base font-semibold text-gray-800 mb-4">Personal Details</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div class="relative flex items-center">
+                    <input type="text" placeholder="First Name"
+                      class="px-4 py-3.5 bg-white text-gray-800 w-full text-sm border-b focus:border-gray-800 outline-none rounded-xl" />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#bbb" stroke="#bbb" class="w-[18px] h-[18px] absolute right-4"
+                      viewBox="0 0 24 24">
+                      <circle cx="10" cy="7" r="6" data-original="#000000"></circle>
+                      <path
+                        d="M14 15H6a5 5 0 0 0-5 5 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 5 5 0 0 0-5-5zm8-4h-2.59l.3-.29a1 1 0 0 0-1.42-1.42l-2 2a1 1 0 0 0 0 1.42l2 2a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42l-.3-.29H22a1 1 0 0 0 0-2z"
+                        data-original="#000000"></path>
+                    </svg>
+                  </div>
+  
+                  <div class="relative flex items-center">
+                    <input type="text" placeholder="Last Name"
+                      class="px-4 py-3.5 bg-white text-gray-800 w-full text-sm border-b focus:border-gray-800 outline-none rounded-xl" />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#bbb" stroke="#bbb" class="w-[18px] h-[18px] absolute right-4"
+                      viewBox="0 0 24 24">
+                      <circle cx="10" cy="7" r="6" data-original="#000000"></circle>
+                      <path
+                        d="M14 15H6a5 5 0 0 0-5 5 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 5 5 0 0 0-5-5zm8-4h-2.59l.3-.29a1 1 0 0 0-1.42-1.42l-2 2a1 1 0 0 0 0 1.42l2 2a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42l-.3-.29H22a1 1 0 0 0 0-2z"
+                        data-original="#000000"></path>
+                    </svg>
+                  </div>
+  
+                  <div class="relative flex items-center">
+                    <input type="email" placeholder="Email"
+                      class="px-4 py-3.5 bg-white text-gray-800 w-full text-sm border-b focus:border-gray-800 outline-none rounded-xl" />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#bbb" stroke="#bbb" class="w-[18px] h-[18px] absolute right-4"
+                      viewBox="0 0 682.667 682.667">
+                      <defs>
+                        <clipPath id="a" clipPathUnits="userSpaceOnUse">
+                          <path d="M0 512h512V0H0Z" data-original="#000000"></path>
+                        </clipPath>
+                      </defs>
+                      <g clip-path="url(#a)" transform="matrix(1.33 0 0 -1.33 0 682.667)">
+                        <path fill="none" stroke-miterlimit="10" stroke-width="40"
+                          d="M452 444H60c-22.091 0-40-17.909-40-40v-39.446l212.127-157.782c14.17-10.54 33.576-10.54 47.746 0L492 364.554V404c0 22.091-17.909 40-40 40Z"
+                          data-original="#000000"></path>
+                        <path
+                          d="M472 274.9V107.999c0-11.027-8.972-20-20-20H60c-11.028 0-20 8.973-20 20V274.9L0 304.652V107.999c0-33.084 26.916-60 60-60h392c33.084 0 60 26.916 60 60v196.653Z"
+                          data-original="#000000"></path>
+                      </g>
+                    </svg>
+                  </div>
+  
+                  <div class="relative flex items-center">
+                    <input type="number" placeholder="Phone No."
+                      class="px-4 py-3.5 bg-white text-gray-800 w-full text-sm border-b focus:border-gray-800 outline-none rounded-xl" />
+                    <svg fill="#bbb" class="w-[18px] h-[18px] absolute right-4" viewBox="0 0 64 64">
+                      <path
+                        d="m52.148 42.678-6.479-4.527a5 5 0 0 0-6.963 1.238l-1.504 2.156c-2.52-1.69-5.333-4.05-8.014-6.732-2.68-2.68-5.04-5.493-6.73-8.013l2.154-1.504a4.96 4.96 0 0 0 2.064-3.225 4.98 4.98 0 0 0-.826-3.739l-4.525-6.478C20.378 10.5 18.85 9.69 17.24 9.69a4.69 4.69 0 0 0-1.628.291 8.97 8.97 0 0 0-1.685.828l-.895.63a6.782 6.782 0 0 0-.63.563c-1.092 1.09-1.866 2.472-2.303 4.104-1.865 6.99 2.754 17.561 11.495 26.301 7.34 7.34 16.157 11.9 23.011 11.9 1.175 0 2.281-.136 3.29-.406 1.633-.436 3.014-1.21 4.105-2.302.199-.199.388-.407.591-.67l.63-.899a9.007 9.007 0 0 0 .798-1.64c.763-2.06-.007-4.41-1.871-5.713z"
+                        data-original="#000000"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="mt-8">
+                <h3 class="text-base font-semibold text-gray-800 mb-4">Shipping Address</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                  <input type="text" placeholder="Address Line"
+                    class="px-4 py-3.5 bg-white text-gray-800 w-full text-sm border-b focus:border-gray-800 outline-none rounded-xl" />
+                  <input type="text" placeholder="City"
+                    class="px-4 py-3.5 bg-white text-gray-800 w-full text-sm border-b focus:border-gray-800 outline-none rounded-xl" />
+                  <input type="text" placeholder="State"
+                    class="px-4 py-3.5 bg-white text-gray-800 w-full text-sm border-b focus:border-gray-800 outline-none rounded-xl" />
+                  <input type="text" placeholder="Zip Code"
+                    class="px-4 py-3.5 bg-white text-gray-800 w-full text-sm border-b focus:border-gray-800 outline-none rounded-xl" />
+                </div>
+  
+                <div class="flex gap-4 max-md:flex-col mt-8">
+                  <button type="button" class="rounded-md px-4 py-3 w-full text-sm font-semibold bg-transparent hover:bg-gray-100 border-2 text-gray-800 max-md:order-1">Cancel</button>
+                  <button type="button" class="rounded-md px-4 py-3 w-full text-sm font-semibold bg-gray-800 text-white hover:bg-gray-900">Complete Purchase</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+</body>
+</html>
