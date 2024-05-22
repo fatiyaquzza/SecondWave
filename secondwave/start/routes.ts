@@ -15,4 +15,10 @@ router.get('/home', [PagesController, 'home'])
 router.get('/signin', [PagesController, 'signin'])
 router.get('/register', [PagesController, 'register'])
 router.get('/admin', [PagesController, 'admin'])
+router.get('/profile', [PagesController, 'profile'])
+router.get('/product', [PagesController, 'product'])
+router.get('/order', [PagesController, 'order'])
+
+
+
 
