@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> SecondWave || Sign Up </title>
+  <title> SecondWave || Sign In </title>
 
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -15,8 +15,8 @@
             </div>
             <div class="mt-6">
                 <p class="text-white text-center text-lg">
-                    if you already have an account <br>
-                    you can  <a href="{{route('/signin')}}" class="text-[#49A3AB]"> Sign in here! </a>
+                    if you don’t have an account <br>
+                    you can <a href="{{route('/register')}}" class="text-[#49A3AB]"> Register here! </a>
                 </p>
             </div>
         </div>
@@ -25,7 +25,7 @@
             
             <div>
                 <p class="font-semibold">
-                    Sign Up to
+                    Sign In to
                 </p>
                 <p class="font-light mt-4">
                     Secondwave
@@ -37,12 +37,6 @@
                     <label for="email"></label>
                     <input type="email" id="email" class="bg-[#EAF0F7] text-gray-900 text-sm rounded-lg block w-full p-4 " placeholder="Enter Email" required />
                 </div>
-
-                <div class="mb-5">
-                    <label for="username"></label>
-                    <input type="name" id="username" class="bg-[#EAF0F7] text-gray-900 text-sm rounded-lg block w-full p-4 " placeholder="Enter Username" required />
-                </div>
-
                 <div class="mb-5">
                     <label for="email"></label>
                     <select type="email" id="email" class="bg-[#EAF0F7] text-gray-900 text-sm rounded-lg block w-full p-4" required>
@@ -51,19 +45,13 @@
                     <option>Seller</option>
                     </select>
                 </div>
-
                 <div class="mb-5">
                     <label for="password"></label>
                     <input type="password" id="password" class="bg-[#EAF0F7] text-gray-900 text-sm rounded-lg block w-full p-4 " placeholder="Enter Password" required />
                 </div>
 
                 <div class="mb-5">
-                    <label for="password-confirm"></label>
-                    <input type="password" id="password-confirm" class="bg-[#EAF0F7] text-gray-900 text-sm rounded-lg block w-full p-4 " placeholder="Confirm Password" required />
-                </div>
-
-                <div class="mb-5">
-                    <button type="submit"  class="bg-[#49A3AB] text-lg rounded-lg block w-full p-4 text-white font-medium hover:bg-[#21575B]">Sign Up</button>
+                    <button type="submit"  class="bg-[#49A3AB] text-lg rounded-lg block w-full p-4 text-white font-medium hover:bg-[#21575B]">Sign In</button>
                 </div>
             </form>
         </div>
