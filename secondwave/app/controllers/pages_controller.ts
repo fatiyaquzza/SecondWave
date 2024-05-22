@@ -7,15 +7,27 @@ export default class PagesController {
   }
 
   async admin({ view }: HttpContext) {
-    return view.render('pages/admin')
+    return view.render('pages/admin/dashboard')
   }
 
   async signin({ view }: HttpContext) {
-    return view.render('pages/signin')
+    return view.render('pages/auth/signin')
   }
 
   async register({ view }: HttpContext) {
-    return view.render('pages/register')
+    return view.render('pages/auth/register')
+  }
+
+  async profile({ view }: HttpContext) {
+    return view.render('pages/admin/profile')
+  }
+
+  async product({ view }: HttpContext) {
+    return view.render('pages/admin/product')
+  }
+
+  async order({ view }: HttpContext) {
+    return view.render('pages/admin/order')
   }
 
 }
