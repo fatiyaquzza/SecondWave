@@ -110,18 +110,18 @@
 
                         <div class="w-full">
                             <label for="text" class="block mt-4 mb-2 text-md font-normal text-black ">Product Name</label>
-                            <input type="text" id="text" class="bg-[#EEEEEE] border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 shadow-md" placeholder="Enter Your Product Name" required />
+                            <input type="text" id="text" name="text" class="bg-[#EEEEEE] border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 shadow-md" placeholder="Enter Your Product Name" required />
                         </div>
 
                         <div class="w-full">
                             <label for="text" class="block mt-8 mb-2 text-md font-normal text-black ">
                                 Product Description
                             </label>
-                            <textarea id="message" rows="5 " class="block p-2 w-full text-sm text-gray-900 bg-[#EEEEEE] rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 shadow-md" placeholder="Leave a comment...">
+                            <textarea id="message" name="message" rows="5 " class="block p-2 w-full text-sm text-gray-900 bg-[#EEEEEE] rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 shadow-md" placeholder="Leave a comment...">
                             </textarea>
                         </div>
 
-                        <div class="flex justify-between mt-8">
+                        <div class="flex justify-between mt-4">
                             <div>
                                 <p for="text" class="block mt-4 mb-2 text-md font-normal text-black ">
                                     Gender
@@ -144,14 +144,23 @@
 
                             <div class="w-5/12">
                                 <label for="size" class="block mt-4 mb-2 text-md font-normal text-black ">Product Size</label>
-                                <input type="text" id="size" class="bg-[#EEEEEE] border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 shadow-md" placeholder="Enter Your Product Size" required />
+                                <input type="text" name="size" id="size" class="bg-[#EEEEEE] border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 shadow-md" placeholder="Enter Your Product Size" required />
                             </div>
                         </div>
 
-                        <div class="w-full">
+                        <div class="flex justify-between mt-4">
+                          <div class="w-5/12">
                             <label for="price" class="block mt-4 mb-2 text-md font-normal text-black ">Pricing</label>
                             <input type="number" name="price" id="price" class="bg-[#EEEEEE] border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 shadow-md" placeholder="Enter Price" required />
                         </div>
+                        <div class="w-5/12">
+                          <label for="duration" class="block mt-4 mb-2 text-md font-normal text-black ">Duration of Use</label>
+                          <input type="text" id="duration" name="duration" class="bg-[#EEEEEE] border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 shadow-md" placeholder="Enter the Duration of Use" required />
+                      </div>
+
+                        </div>
+
+            
                     </div>
                 </div>
 
@@ -162,7 +171,7 @@
                       </p>
                       <div class="px-4 py-6">
                         <div id="image-preview" class="max-w-sm p-6 mb-4 bg-gray-100 border-dashed border-2 border-gray-400 rounded-lg items-center mx-auto text-center cursor-pointer">
-                          <input id="upload" type="file" class="hidden" accept="image/*" />
+                          <input id="upload" name="upload" type="file" class="hidden" accept="image/*" />
                           <label for="upload" class="cursor-pointer">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-700 mx-auto mb-4">
                               <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
@@ -179,7 +188,7 @@
 
                     <div class="bg-white w-full p-6 shadow-md rounded-xl mt-3">
                       <label for="category" class="text-xl text-black font-semibold">Category</label>
-                      <select id="category" class="bg-[#EEEEEE] border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 mt-4">
+                      <select id="category" name="category" class="bg-[#EEEEEE] border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 mt-4">
                     
                         <option>Shoes</option>
                         <option>Clothing</option>

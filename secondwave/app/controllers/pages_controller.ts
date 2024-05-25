@@ -30,4 +30,12 @@ export default class PagesController {
     return view.render('pages/admin/order')
   }
 
+  async account({ view }: HttpContext) {
+    return view.render('pages/account')
+  }
+
+  async detail({ view }: HttpContext) {
+    return view.render('pages/detail')
+  }
+
 }
