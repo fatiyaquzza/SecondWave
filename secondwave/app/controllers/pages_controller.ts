@@ -38,4 +38,13 @@ export default class PagesController {
     return view.render('pages/detail')
   }
 
+  async cart({ view }: HttpContext) {
+    return view.render('pages/cart')
+  }
+
+  async checkout({ view }: HttpContext) {
+    return view.render('pages/checkout')
+  }
+
+
 }
