@@ -4,97 +4,63 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <title>SecondWave || Home</title>
+  <title>SecondWave || Product Detail</title>
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="font-primary">
-  @if (await auth.check())
-  Logged in as {{ auth.user.fullName }}
-  <form method="POST" action="{{ route('auth.logout') }}">
-    {{ csrfField() }}
-    <button type="submit">Logout</button>
-  </form>
-  @else
-  @endif
-  @layouts.navbar()
+<body class="font-primary bg-white">
 
-  @end
+    @layouts.navbar()
 
-  <nav class="bg-[#757575] border-gray-200 dark:bg-gray-900 mb-10">
-    <div class="relative w-full h- bg-cover bg-center" style="background-image: url('{{asset('/resources/images/rectanglenavbar.png')}}'); height: 400px;">
+    @end
+
+  <div class="h-screen my-10 mx-20 py-10 px-20 bg-[#f1f1f1] rounded-lg shadow-md">
+    <div class="flex">
+        <div class="p-3 rounded-lg bg-white flex justify-center items-center shadow-md">
+            <img src="{{asset('/resources/images/product.png')}}" class="w-[700px] rounded-lg"/>
+        </div>
+
+        <div class="w-7/12 pl-20 py-12">
+            <p class="text-3xl font-semibold">
+                Product Name
+            </p>
+            <p class="mt-2 text-lg font-medium">
+                Rp120.000,00
+            </p>
+            <hr class="h-px my-6 mr-20 bg-gray-300 border-0 dark:bg-gray-700 ">
+
+            <p class="mt-2 text-lg font-medium">
+                Size :
+            </p>
+
+            <p class="text-lg">
+                36
+            </p>
+
+            <p class="mt-4 text-lg font-medium">
+                Duration of Use :
+            </p>
+
+            <p class="text-lg">
+                8 Months
+            </p>
+
+            <button class="bg-black text-lg rounded-lg block w-full mt-6 p-4 text-white font-medium hover:bg-gray-900">
+                Add to Cart
+            </button>
+
+        </div>
     </div>
-  </nav>
 
-  <div>
-    <p class="mt-10 ml-10 font-medium text-lg">Browse by Category</p>
+    <div class="bg-white text-black border-slate-200 border-2 p-8 mt-10 rounded-lg">
+        <p class="text-lg font-medium">
+            Description
+        </p>
+        <p class="mt-2 text-gray-800 text-justify">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, velit neque? Repellat quod dolores laborum temporibus. Harum, tenetur delectus eaque veritatis cumque eum voluptatibus repellat fugiat inventore. Quisquam soluta ratione debitis temporibus? Id laboriosam ullam provident quaerat eos recusandae distinctio tenetur et! Sed exercitationem deleniti ducimus maiores debitis dignissimos porro?
+        </p>
+    </div>
   </div>
 
-  <div class="flex flex-wrap justify-center mt-10">
-    <div class="p-8 border border-gray-300 rounded-lg shadow-sm text-center m-2 hover:shadow-md">
-      <img src="{{asset('/resources/images/phone.png')}}" class="w-16 h-16 mx-auto rounded-lg "/>
-      <p class="mt-2 font-medium text-sm">Phone</p>
-    </div>
-    <div class="p-8 border border-gray-300 rounded-lg shadow-sm text-center m-2 hover:shadow-md">
-      <img src="{{asset('/resources/images/Notebook.png')}}" class="w-16 h-16 mx-auto rounded-lg "/>
-      <p class="mt-2 font-medium text-sm">Notebook</p>
-    </div>
-    <div class="p-8 border border-gray-300 rounded-lg shadow-sm text-center m-2 hover:shadow-md">
-      <img src="{{asset('/resources/images/tshirt.png')}}" class="w-16 h-16 mx-auto rounded-lg"/>
-      <p class="mt-2 font-medium text-sm">T-shirt</p>
-    </div>
-    <div class="p-8 border border-gray-300 rounded-lg shadow-sm text-center m-2 hover:shadow-md">
-      <img src="{{asset('/resources/images/oneset.png')}}" class="w-16 h-16 mx-auto rounded-lg "/>
-      <p class="mt-2 font-medium text-sm">Oneset</p>
-    </div>
-    <div class="p-8 border border-gray-300 rounded-lg shadow-sm text-center m-2 hover:shadow-md">
-      <img src="{{asset('/resources/images/makeup.png')}}" class="w-16 h-16 mx-auto rounded-lg "/>
-      <p class="mt-2 font-medium text-sm">Makeup</p>
-    </div>
-    <div class="p-8 border border-gray-300 rounded-lg shadow-sm text-center m-2 hover:shadow-md">
-      <img src="{{asset('/resources/images/parfume.png')}}" class="w-16 h-16 mx-auto rounded-lg "/>
-      <p class="mt-2 font-medium text-sm">Parfume</p>
-    </div>
-  </div>
-
-  <div class="mt-10 mx-auto border border-gray-300 rounded-lg flex items-center" style="width: 1273px; height: 270px; background-color: #D9D9D9;">
-    <div class="ml-10">
-      <p class="mt-0 font-medium text-lg">Enhance Your</p>
-      <p class="mt-2 font-medium text-lg">Fragrants Experience</p>
-    </div>
-    <img src="{{asset('/resources/images/parfume2.png')}}" class="ml-auto mr-10" style="width: 200px; height: 200px;"/>
-  </div>
-
-  <div>
-    <p class="mt-10 ml-10 font-medium text-lg">Explore Our Product</p>
-  </div>
-
-  <div class="flex justify-center mt-10 mx-auto max-w-screen-lg">
-    <div class="p-8 border border-gray-300 rounded-lg shadow-sm text-center m-2 hover:shadow-md" style="flex-basis: 20%;">
-      <img src="{{asset('/resources/images/makeoverlips.png')}}" class="w-16 h-16 mx-auto rounded-lg "/>
-      <p class="mt-2 font-medium text-sm">Make Over Lip</p>
-      <p class="mt-2 font-large text-sm">RP.120,000</p>
-    </div>
-    <div class="p-8 border border-gray-300 rounded-lg shadow-sm text-center m-2 hover:shadow-md" style="flex-basis: 20%;">
-      <img src="{{asset('/resources/images/parfume 3.png')}}" class="w-16 h-16 mx-auto rounded-lg "/>
-      <p class="mt-2 font-medium text-sm">Parfume</p>
-      <p class="mt-2 font-large text-sm">RP.960,000</p>
-    </div>
-    <div class="p-8 border border-gray-300 rounded-lg shadow-sm text-center m-2 hover:shadow-md" style="flex-basis: 20%;">
-      <img src="{{asset('/resources/images/sofa.png')}}" class="w-16 h-16 mx-auto rounded-lg"/>
-      <p class="mt-2 font-medium text-sm">Sofa</p>
-      <p class="mt-2 font-large text-sm">RP.2,000,000</p>
-    </div>
-    <div class="p-8 border border-gray-300 rounded-lg shadow-sm text-center m-2 hover:shadow-md" style="flex-basis: 20%;">
-      <img src="{{asset('/resources/images/tshirt.png')}}" class="w-16 h-16 mx-auto rounded-lg "/>
-      <p class="mt-2 font-medium text-sm">Tshirt</p>
-      <p class="mt-2 font-large text-sm">RP.150,000</p>
-    </div>
-    <div class="p-8 border border-gray-300 rounded-lg shadow-sm text-center m-2 hover:shadow-md" style="flex-basis: 20%;">
-      <img src="{{asset('/resources/images/cap.png')}}" class="w-16 h-16 mx-auto rounded-lg "/>
-      <p class="mt-2 font-medium text-sm">Cap</p>
-      <p class="mt-2 font-large text-sm">RP.520,000</p>
-    </div>
-  </div>
 
   <div class="mt-10 mx-auto border border-gray-300" style="width: 1520px; height: 60px; background-color: #D9D9D9; ">
     <p class="flex flex-wrap justify-center mt-4">YOUR FAVORITE BRANDS</p>
@@ -188,8 +154,7 @@
             </div>
         </div>
   </footer>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-     
-</body>
-</html>
+  
+  
+  </body>
+  </html>

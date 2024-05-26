@@ -14,9 +14,9 @@ export default class PagesController {
     return view.render('pages/auth/signin')
   }
 
-  async register({ view }: HttpContext) {
-    return view.render('pages/auth/register')
-  }
+  // async register({ view }: HttpContext) {
+  //   return view.render('pages/auth/register')
+  // }
 
   async profile({ view }: HttpContext) {
     return view.render('pages/admin/profile')
@@ -28,6 +28,14 @@ export default class PagesController {
 
   async order({ view }: HttpContext) {
     return view.render('pages/admin/order')
+  }
+
+  async account({ view }: HttpContext) {
+    return view.render('pages/account')
+  }
+
+  async detail({ view }: HttpContext) {
+    return view.render('pages/detail')
   }
 
   async cart({ view }: HttpContext) {
