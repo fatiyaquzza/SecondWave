@@ -1,72 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> SecondWave || Admin-Account </title>
-
-  @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
-<body class="font-primary">
-  <div class="min-h-screen h-full w-full flex bg-[#F9F9F9] text-gray-800">
-
-    <div class="h-screen flex flex-col top-0 left-0 w-64 bg-white border-r shadow-lg">
-      <div class="flex items-center justify-center h-14 mt-10">
-        <p class="font-semibold text-3xl">Second<span class="text-[#4285F4]">Wave</span></p>
-      </div>
-      <div class="overflow-y-auto overflow-x-hidden flex-grow">
-        <ul class="flex flex-col py-4 space-y-1 pt-8">
-          <li>
-            <a href="{{route('/admin')}}" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-800 hover:text-gray-800 border-l-4 border-transparent hover:border-blue-500 pr-6 py-8">
-              <span class="inline-flex justify-center items-center ml-4">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
-              </span>
-              <span class="ml-2 text-base tracking-wide truncate">Dashboard</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="{{route('/order')}}" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-800 hover:text-gray-800 border-l-4 border-transparent hover:border-blue-500 pr-6 py-8">
-              <span class="inline-flex justify-center items-center ml-4">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-              </span>
-              <span class="ml-2 text-base tracking-wide truncate">Order</span>
-            </a>
-          </li>
-          <li>
-            <a href="{{route('/product')}}" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-800 hover:text-gray-800 border-l-4 border-transparent hover:border-blue-500 pr-6 py-8">
-              <span class="inline-flex justify-center items-center ml-4">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
-              </span>
-              <span class="ml-2 text-base tracking-wide truncate">Product</span>
-            </a>
-          </li>
-          <li>
-            <a href="{{route('/profile')}}" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-800 hover:text-gray-800 border-l-4 border-transparent hover:border-blue-500 pr-6 py-8">
-              <span class="inline-flex justify-center items-center ml-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M10 2a3 3 0 100 6 3 3 0 000-6zM5 8a5 5 0 1110 0H5z" clip-rule="evenodd" />
-                  <path d="M5 8a5 5 0 0110 0h2a7 7 0 00-14 0h2z" />
-                  <path d="M10 12a3 3 0 100 6 3 3 0 000-6z" />
-                </svg>
-              </span>
-              <span class="ml-2 text-base tracking-wide truncate">Account</span>
-            </a>
-          </li>
-          <li>
-            <a href="{{route('/signin')}}" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-800 hover:text-gray-800 border-l-4 border-transparent hover:border-blue-500 pr-6 py-8">
-              <span class="inline-flex justify-center items-center ml-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M13 3c-1.1 0-2 .9-2 2v3h2V5h7v14h-7v-3h-2v3c0 1.1.9 2 2 2h7c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-7z"/>
-                  <path d="M10 17l-5-5 5-5v3h4v4h-4v3z"/>
-                </svg>
-              </span>
-              <span class="ml-2 text-base tracking-wide truncate">Logout</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
+@layouts.mainAdmin()
+@slot('title')
+Profile
+@endslot
+@slot('body')
 
     <div class="pl-16 pt-10 w-10/12">
       <div class="w-full flex justify-between">
@@ -83,13 +19,9 @@
             Profile
           </p>
         </div>
+        @layouts.profileAdmin()
 
-        <div class="flex pr-16">
-          <img src="{{asset('/resources/images/minghao.jpg')}}" alt="profile" class="w-8 h-8 rounded-full"/>
-          <div class="pl-2 flex mt-1">
-            <p class="text-sm font-medium">Minghao</p>
-          </div>
-        </div>
+        @end
       </div>
 
       <div class="mb-6">
@@ -142,6 +74,5 @@
       </form>
 
     </div>
-  </div>
-</body>
-</html>
+    @endslot
+    @end

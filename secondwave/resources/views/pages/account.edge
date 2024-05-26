@@ -7,10 +7,10 @@
   <title>SecondWave || Home</title>
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="font-primary bg-[#D9D9D9]">
-  <nav class="bg-[#757575] border-gray-200 dark:bg-gray-900">
+<body class="font-primary bg-white">
+  {{--  <nav class="bg-[#757575] border-gray-200 dark:bg-gray-900">
     <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4">
-      <a href="{{route('/home')}}" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <a href="/home" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="{{asset('/resources/images/SecondWave.png')}}" class="h-4" alt="Flowbite Logo" />
       </a>
       <div class="flex flex-grow ml-4">
@@ -23,26 +23,29 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="32.402" height="32" viewBox="0 0 32.402 32" id="cart"><path d="M6 30a2 2 1080 1 0 4 0 2 2 1080 1 0-4 0zm18 0a2 2 1080 1 0 4 0 2 2 1080 1 0-4 0zM-.058 5a1 1 0 0 0 1 1H3.02l1.242 5.312L6 20c0 .072.034.134.042.204l-1.018 4.58A.997.997 0 0 0 6 26h22.688a1 1 0 0 0 0-2H7.248l.458-2.06c.1.016.19.06.294.06h18.23c1.104 0 1.77-.218 2.302-1.5l3.248-9.964C32.344 8.75 31.106 8 30 8H6c-.156 0-.292.054-.438.088l-.776-3.316A1 1 0 0 0 3.812 4H.942a1 1 0 0 0-1 1zm6.098 5h23.81l-3.192 9.798c-.038.086-.07.148-.094.19-.066.006-.17.012-.334.012H8v-.198l-.038-.194L6.04 10z"></path></svg>
         </a>
         <!-- Icon chat -->
-        <a href="/chat" class="text-white hover:text-gray-300">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 96 96" id="chat"><path stroke="#000" stroke-linejoin="round" stroke-width="5" d="M9 24.5C9 19.5294 13.0294 15.5 18 15.5H78C82.9706 15.5 87 19.5294 87 24.5V57.1392C87 62.1098 82.9706 66.1392 78 66.1392H45.0658C44.3969 66.1392 43.756 66.4073 43.2862 66.8834L29.198 81.1624C27.628 82.7537 24.9184 81.642 24.9184 79.4066V68.6392C24.9184 67.2585 23.7991 66.1392 22.4184 66.1392H18C13.0294 66.1392 9 62.1098 9 57.1392V24.5Z"></path><circle cx="33" cy="42" r="4" fill="#000"></circle><circle cx="48" cy="42" r="4" fill="#000"></circle><circle cx="63" cy="42" r="4" fill="#000"></circle></svg>
+        <a href="/account" class="text-white hover:text-gray-300">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 24 24" id="account" class="pt-1"><path fill="#000" fill-rule="evenodd" d="M12 2.5C6.75329 2.5 2.5 6.75329 2.5 12C2.5 17.2467 6.75329 21.5 12 21.5C17.2467 21.5 21.5 17.2467 21.5 12C21.5 6.75329 17.2467 2.5 12 2.5ZM1.5 12C1.5 6.20101 6.20101 1.5 12 1.5C17.799 1.5 22.5 6.20101 22.5 12C22.5 17.799 17.799 22.5 12 22.5C6.20101 22.5 1.5 17.799 1.5 12Z" clip-rule="evenodd"></path><path fill="#000" fill-rule="evenodd" d="M12 6.5C10.6193 6.5 9.5 7.61929 9.5 9 9.5 10.3807 10.6193 11.5 12 11.5 13.3807 11.5 14.5 10.3807 14.5 9 14.5 7.61929 13.3807 6.5 12 6.5zM8.5 9C8.5 7.067 10.067 5.5 12 5.5 13.933 5.5 15.5 7.067 15.5 9 15.5 10.933 13.933 12.5 12 12.5 10.067 12.5 8.5 10.933 8.5 9zM12.0004 14.5C8.95014 14.5 6.38947 16.6015 5.6896 19.4364L4.71875 19.1967C5.52627 15.9258 8.47943 13.5 12.0004 13.5 15.5214 13.5 18.4746 15.9258 19.2821 19.1967L18.3112 19.4364C17.6114 16.6015 15.0507 14.5 12.0004 14.5z" clip-rule="evenodd"></path></svg>
         </a>
       </div>
     </div>
-  </nav>
+  </nav>  --}}
+  @layouts.navbar()
 
-  <div class="flex justify-center">
+  @end
+
+  <div class="flex justify-center h-screen">
     <div class="w-10/12">
         <div class="mb-6 mt-10">
             <p class="font-semibold text-black mt-6 text-2xl">
               Profile
             </p>
-            <hr class="h-px my-3 mr-20 bg-gray-400 border-0 dark:bg-gray-700 ">
+            <hr class="h-px my-3 mr-24 bg-gray-400 border-0 dark:bg-gray-700 ">
     
           </div>
     
           <div class="flex">
             <div>
-              <img src="{{asset('/resources/images/minghao.jpg')}}" alt="profile" class="w-32 rounded-lg shadow-md"/>
+              <img src="{{asset('/resources/images/minghao.jpg')}}" alt="profile" class="w-32 rounded-lg shadow-md border border-gray-400"/>
             </div>
             <div class="ml-4 mt-2">
               <p class="font-semibold text-xl">Minghao</p>
@@ -79,89 +82,94 @@
     <p class="flex flex-wrap justify-center mt-4">YOUR FAVORITE BRANDS</p>
   </div>
   <footer class="dark:bg-black-300" style="background-color: #5C5C5C;">
-    <div class="mx-auto w-full max-w-screen-xl">
-        <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
-            <div>
-                <h2 class="mb-6 text-sm font-semibold uppercase dark:text-white text-white">Company</h2>
-                <ul class=" dark:text-white text-white font-medium">
-                    <li class="mb-4">
-                        <a href="#" class=" hover:underline">About</a>
-                    </li>
-                    <li class="mb-4">
-                        <a href="#" class="hover:underline">Careers</a>
-                    </li>
-                    <li class="mb-4">
-                        <a href="#" class="hover:underline">Brand Center</a>
-                    </li>
-                    <li class="mb-4">
-                        <a href="#" class="hover:underline">Blog</a>
-                    </li>
-                </ul>
+        <div class="mx-auto w-full max-w-screen-xl">
+            <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold uppercase dark:text-white text-white">Company</h2>
+                    <ul class=" dark:text-white text-white font-medium">
+                        <li class="mb-4">
+                            <a href="#" class=" hover:underline">About</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Careers</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Brand Center</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white text-white">Help center</h2>
+                    <ul class=" dark:text-white text-white font-medium">
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Discord Server</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Twitter</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Facebook</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold  uppercase dark:text-white text-white">Legal</h2>
+                    <ul class=" dark:text-white text-white font-medium">
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Privacy Policy</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Licensing</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold uppercase dark:text-white text-white">Download</h2>
+                    <ul class="dark:text-white  text-white font-medium">
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">iOS</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Android</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Windows</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">MacOS</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div>
-                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white text-white">Help center</h2>
-                <ul class=" dark:text-white text-white font-medium">
-                    <li class="mb-4">
-                        <a href="#" class="hover:underline">Discord Server</a>
-                    </li>
-                    <li class="mb-4">
-                        <a href="#" class="hover:underline">Twitter</a>
-                    </li>
-                    <li class="mb-4">
-                        <a href="#" class="hover:underline">Facebook</a>
-                    </li>
-                    <li class="mb-4">
-                        <a href="#" class="hover:underline">Contact Us</a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h2 class="mb-6 text-sm font-semibold  uppercase dark:text-white text-white">Legal</h2>
-                <ul class=" dark:text-white text-white font-medium">
-                    <li class="mb-4">
-                        <a href="#" class="hover:underline">Privacy Policy</a>
-                    </li>
-                    <li class="mb-4">
-                        <a href="#" class="hover:underline">Licensing</a>
-                    </li>
-                    <li class="mb-4">
-                        <a href="#" class="hover:underline">Terms &amp; Conditions</a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h2 class="mb-6 text-sm font-semibold uppercase dark:text-white text-white">Download</h2>
-                <ul class="dark:text-white  text-white font-medium">
-                    <li class="mb-4">
-                        <a href="#" class="hover:underline">iOS</a>
-                    </li>
-                    <li class="mb-4">
-                        <a href="#" class="hover:underline">Android</a>
-                    </li>
-                    <li class="mb-4">
-                        <a href="#" class="hover:underline">Windows</a>
-                    </li>
-                    <li class="mb-4">
-                        <a href="#" class="hover:underline">MacOS</a>
-                    </li>
-                </ul>
+            <div class="px-4 py-6  flex items-center justify-between">
+                <span class="text-sm dark:text-gray-300 text-white sm:text-center">© 2023 <a href="/home" class="text-white">SecondWave. All Rights Reserved.</a></span>
+                <div class="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
+                    <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
+                            <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
+                        </svg>
+                        <span class="sr-only">Facebook page</span>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
+                            <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1
+      
+      0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1" ></path>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="px-4 py-6 bg-gray-700 dark:bg-gray-700 flex items-center justify-between">
-            <span class="text-sm dark:text-gray-300 text-white sm:text-center">© 2023 <a href="https://flowbite.com/" class="text-white">Flowbite™. All Rights Reserved.</a></span>
-            <div class="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
-                <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
-                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
-                        <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
-                    </svg>
-                    <span class="sr-only">Facebook page</span>
-                </a>
-                <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
-                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
-                        <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1
-  
-  0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1"/> </svg>
-  
+  </footer>
   
   
   </body>

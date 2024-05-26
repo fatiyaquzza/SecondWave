@@ -14,9 +14,9 @@ export default class PagesController {
     return view.render('pages/auth/signin')
   }
 
-  async register({ view }: HttpContext) {
-    return view.render('pages/auth/register')
-  }
+  // async register({ view }: HttpContext) {
+  //   return view.render('pages/auth/register')
+  // }
 
   async profile({ view }: HttpContext) {
     return view.render('pages/admin/profile')

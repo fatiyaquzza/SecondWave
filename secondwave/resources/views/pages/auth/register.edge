@@ -32,21 +32,28 @@
                 </p>
             </div>
 
-            <form class="max-w-md mt-10">
+            <form method="POST" action="{{ route('auth.register.store') }}" class="max-w-md mt-10">
+                {{ csrfField() }}
                 <div class="mb-5">
                     <label for="email"></label>
-                    <input type="email" id="email" class="bg-[#EAF0F7] text-gray-900 text-sm rounded-lg block w-full p-4 " placeholder="Enter Email" required />
+                    @inputError('email')
+                    {{ $messages.join(', ') }}
+                  @end
+                    <input type="email" id="email" name="email" value="{{old('email') || ''}}" class="bg-[#EAF0F7] text-gray-900 text-sm rounded-lg block w-full p-4 " placeholder="Enter Email" required />
                 </div>
 
                 <div class="mb-5">
-                    <label for="username"></label>
-                    <input type="name" id="username" class="bg-[#EAF0F7] text-gray-900 text-sm rounded-lg block w-full p-4 " placeholder="Enter Username" required />
+                    <label for="fullName"></label>
+                    @inputError('fullName')
+                    {{ $messages.join(', ') }}
+                  @end
+                    <input type="text" id="fullName" name="fullName" value="{{old('username') || ''}}" class="bg-[#EAF0F7] text-gray-900 text-sm rounded-lg block w-full p-4 " placeholder="Enter Username" required />
                 </div>
 
                 <div class="mb-5">
-                    <label for="email"></label>
-                    <select type="email" id="email" class="bg-[#EAF0F7] text-gray-900 text-sm rounded-lg block w-full p-4" required>
-                    <option disabled>Select Role</option>
+                    <label for="role"></label>
+                    <select id="role" name="role" value="{{old('role') || ''}}"  class="bg-[#EAF0F7] text-gray-900 text-sm rounded-lg block w-full p-4" required>
+                    <option selected>Select Role</option>
                     <option>Buyer</option>
                     <option>Seller</option>
                     </select>
@@ -54,12 +61,15 @@
 
                 <div class="mb-5">
                     <label for="password"></label>
-                    <input type="password" id="password" class="bg-[#EAF0F7] text-gray-900 text-sm rounded-lg block w-full p-4 " placeholder="Enter Password" required />
+                    @inputError('password')
+                    {{ $messages.join(', ') }}
+                  @end
+                    <input type="password" id="password" name="password" value="{{old('password') || ''}}" class="bg-[#EAF0F7] text-gray-900 text-sm rounded-lg block w-full p-4 " placeholder="Enter Password" required />
                 </div>
 
                 <div class="mb-5">
-                    <label for="alamat"></label>
-                    <textarea id="alamat" rows="4" class="block p-3 w-full text-sm text-gray-900 bg-[#EAF0F7] rounded-lg border border-gray-300 " placeholder="Full Address"></textarea>
+                    <label for="address"></label>
+                    <textarea id="alamat" name="address" value="{{old('alamat') || ''}}" rows="4" class="block p-3 w-full text-sm text-gray-900 bg-[#EAF0F7] rounded-lg border border-gray-300 " placeholder="Full Address"></textarea>
                 </div>
 
                 <div class="mb-5">
