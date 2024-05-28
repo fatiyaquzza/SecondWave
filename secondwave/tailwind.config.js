@@ -8,7 +8,7 @@ export default {
       },
       fontFamily: {
         primary: ['Poppins'],
-        'body': [
+        body : [
           'Inter', 
           'ui-sans-serif', 
           'system-ui', 

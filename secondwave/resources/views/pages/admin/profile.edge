@@ -34,45 +34,34 @@ Profile
 
       <div class="flex">
         <div>
-          <img src="{{asset('/resources/images/minghao.jpg')}}" alt="profile" class="w-32 rounded-lg shadow-md"/>
+          <img src="{{asset('/resources/images/profile.png')}}" alt="profile" class="w-32 rounded-lg shadow-md"/>
         </div>
         <div class="ml-4 mt-2">
-          <p class="font-semibold text-xl">Minghao</p>
-          <p class="text-gray-400 text-md">minghao@gmail.com</p>
+          <p class="font-semibold text-xl capitalize">{{ auth.user.fullName }}</p>
+          <p class="text-gray-400 text-md">{{ auth.user.email }}</p>
         </div>
       </div>
 
       <p class="mt-12 mb-4 text-xl font-semibold">
-        Edit Your Address
+       Address
       </p>
-      
-      <form class="w-full">
-        {{--  <div class="flex mb-5">
-          <div class="w-6/12">
-            <label for="text" class="block mb-2 text-md font-normal text-[#6A6A6A] ">State</label>
-            <input type="text" id="text" class="bg-[#EEEEEE] border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 shadow-md" placeholder="Indonesia" required />
-          </div>
 
-          <div class="ml-20 w-4/12">
-            <label for="text" class="block mb-2 text-md font-normal text-[#6A6A6A] ">City</label>
-            <input type="text" id="text" class="bg-[#EEEEEE] border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 shadow-md" placeholder="Bandung" required />
-          </div>
-        </div>  --}}
-
+      <form class="w-full" action="" method="">
         <div class="mb-5 w-11/12">
-          <label for="message" class="block mb-2 text-md font-normal text-[#6A6A6A]">Full Address</label>
-          <textarea id="message" rows="5 " class="block p-2 w-full text-sm text-gray-900 bg-[#EEEEEE] rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 shadow-md" placeholder="Leave a comment...">
-            
-          </textarea>
+            <label for="message" class="block mb-2 text-md font-normal text-[#6A6A6A]">Full Address</label>
+            <textarea id="message" disabled name="address" rows="5" class="block p-2 w-full text-md text-gray-900 bg-[#EEEEEE] rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 shadow-md capitalize">{{ auth.user.address }}
+            </textarea>
         </div>
-
+{{--      
         <div>
-          <button type="submit" class="mt-5 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Save Changes</button>
-        
-          <button type="submit" class="mt-5 text-white bg-gray-900 hover:bg-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Cancel</button>
-        </div>
-      </form>
+            <button type="submit" class="mt-5 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Save Changes</button>
+            <button type="button" @click="cancelForm" class="mt-5 text-white bg-gray-900 hover:bg-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Cancel</button>
+        </div>  --}}
+    </form>
+    
 
     </div>
+
+
     @endslot
     @end

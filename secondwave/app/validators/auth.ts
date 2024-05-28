@@ -14,5 +14,6 @@ export const registerValidator = vine.compile(
     vine.object({
       email: vine.string().email().normalizeEmail(),
       password: vine.string(),
+      role: vine.enum(['Buyer', 'Seller']), // Add role validation
     })
   )
