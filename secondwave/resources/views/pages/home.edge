@@ -30,8 +30,8 @@
   <div class="flex flex-wrap justify-center mt-10">
     @each(product in products)
     <div class="p-8 border border-gray-300 rounded-lg shadow-sm text-center m-2" style="flex-basis: 15%;">
-      <img src="{{asset('/resources/images/nike.png')}}" class="w-32 h-32 mx-auto rounded-lg" />
-      <p class="font-medium text-md">{{ product.category }}</p>
+      <img src="{{asset('/resources/images/product2.png')}}" class="w-24 h-24 mx-auto rounded-lg" />
+      <p class="mt-6 font-medium text-sm">{{ product.category }}</p>
     </div>
 
     @endeach
@@ -56,9 +56,9 @@
     @each(product in products)
     <a href="{{ route('product.detail', { id: product.id }) }}">
       <div class="p-8 border border-gray-300 rounded-lg shadow-sm text-center m-2 hover:shadow-md" style="flex-basis: 15%;">
-      <img src="{{asset('/resources/images/makeoverlips.png')}}" class="w-16 h-16 mx-auto rounded-lg " />
-      <p class="mt-2 font-medium text-xl">{{ product.product_name }}</p>
-      <p class="mt-2 text-md">Rp.{{ product.pricing }}</p>
+      <img src="{{asset('/resources/images/product2.png')}}" class="w-24 h-24 mx-auto rounded-lg " />
+      <p class="mt-6 font-medium text-sm">{{ product.product_name }}</p>
+      <p class=" text-sm">Rp.{{ product.pricing }}</p>
     </a>
     </div>
 
