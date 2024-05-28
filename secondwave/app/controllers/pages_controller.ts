@@ -26,8 +26,8 @@ export default class PagesController {
     return view.render('pages/account')
   }
 
-  async detail({ view }: HttpContext) {
-    return view.render('pages/detail')
+  async all({ view }: HttpContext) {
+    return view.render('pages/all')
   }
 
   async cart({ view }: HttpContext) {

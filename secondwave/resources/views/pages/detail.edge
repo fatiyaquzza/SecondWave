@@ -20,11 +20,11 @@
         </div>
 
         <div class="w-7/12 pl-20 py-12">
-            <p class="text-3xl font-semibold">
-                Product Name
+            <p class="text-3xl font-semibold capitalize">
+                {{ product.product_name }}
             </p>
             <p class="mt-2 text-lg font-medium">
-                Rp120.000,00
+                Rp.{{ product.pricing }}
             </p>
             <hr class="h-px my-6 mr-20 bg-gray-300 border-0 dark:bg-gray-700 ">
 
@@ -33,7 +33,7 @@
             </p>
 
             <p class="text-lg">
-                36
+                {{ product.product_size }}
             </p>
 
             <p class="mt-4 text-lg font-medium">
@@ -44,9 +44,12 @@
                 8 Months
             </p>
 
-            <button class="bg-black text-lg rounded-lg block w-full mt-6 p-4 text-white font-medium hover:bg-gray-900">
-                Add to Cart
-            </button>
+            <a href="/cart">
+                <button class="bg-black text-lg rounded-lg block w-full mt-6 p-4 text-white font-medium hover:bg-gray-900">
+                    Add to Cart
+                </button>
+            </a>
+
 
         </div>
     </div>
@@ -56,7 +59,7 @@
             Description
         </p>
         <p class="mt-2 text-gray-800 text-justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, velit neque? Repellat quod dolores laborum temporibus. Harum, tenetur delectus eaque veritatis cumque eum voluptatibus repellat fugiat inventore. Quisquam soluta ratione debitis temporibus? Id laboriosam ullam provident quaerat eos recusandae distinctio tenetur et! Sed exercitationem deleniti ducimus maiores debitis dignissimos porro?
+            {{ product.product_description }}
         </p>
     </div>
   </div>

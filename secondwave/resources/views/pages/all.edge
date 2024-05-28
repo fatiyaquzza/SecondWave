@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <title>SecondWave || Home</title>
+  <title>SecondWave || All Products</title>
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
@@ -17,53 +17,41 @@
   <nav class="bg-[#757575] border-gray-200 mb-10 relative">
     <div class="relative w-full bg-cover bg-center"
       style="background-image: url('{{ asset('/resources/images/rectanglenavbar.png') }}'); height: 400px;">
-      <p class="font-semibold text-5xl text-center absolute inset-0 flex items-center justify-center text-[#757575] drop-shadow-xl">
-        Welcome To Second<span class="text-[#C2B4A9] ">Wave</span>
+      <p class="font-semibold text-5xl text-center absolute inset-0 flex items-center justify-center text-[#757575] drop-shadow-lg">
+        All Products
       </p>
     </div>
   </nav>
 
-  <div>
-    <p class="mt-10 ml-20 font-medium text-lg">Browse by Category</p>
-  </div>
-
-  <div class="flex flex-wrap justify-center mt-10">
-    @each(product in products)
-    <div class="p-8 border border-gray-300 rounded-lg shadow-sm text-center m-2" style="flex-basis: 15%;">
-      <img src="{{asset('/resources/images/nike.png')}}" class="w-32 h-32 mx-auto rounded-lg" />
-      <p class="font-medium text-md">{{ product.category }}</p>
-    </div>
-
-    @endeach
-  </div>
-
-  <div class="mt-10 mx-auto border border-gray-300 rounded-lg flex items-center shadow-lg"
-    style="width: 1273px; height: 270px; background-color: #D9D9D9;">
-    <div class="ml-10">
-      <p class="mt-0 font-medium text-lg">Enhance Your</p>
-      <p class="mt-2 font-medium text-lg">Fragrants Experience</p>
-    </div>
-    <img src="{{asset('/resources/images/parfume2.png')}}" class="ml-auto mr-10" style="width: 200px; height: 200px;" />
-  </div>
-
-  <div class="flex justify-between">
-    <p class="mt-10 ml-20 font-medium text-lg">Explore Our Product</p>
-    <a href="/all"><p class="mt-10 mr-20 text-blue-500">See More</p></a>
-
-  </div>
-
-  <div class="flex flex-wrap justify-center mt-10">
+  {{--  <div class="flex flex-wrap justify-center mt-10 mx-auto max-w-screen-xl">  --}}
+    <div class="flex flex-wrap justify-center mt-10 mx-auto max-w-screen-xl">
     @each(product in products)
     <a href="{{ route('product.detail', { id: product.id }) }}">
-      <div class="p-8 border border-gray-300 rounded-lg shadow-sm text-center m-2 hover:shadow-md" style="flex-basis: 15%;">
+    <div class="p-8 border border-gray-300 rounded-lg shadow-sm text-center m-2 hover:shadow-md" style="flex-basis: 20%;">
       <img src="{{asset('/resources/images/makeoverlips.png')}}" class="w-16 h-16 mx-auto rounded-lg " />
       <p class="mt-2 font-medium text-xl">{{ product.product_name }}</p>
       <p class="mt-2 text-md">Rp.{{ product.pricing }}</p>
     </a>
     </div>
 
+    <a href="{{ route('product.detail', { id: product.id }) }}">
+    <div class="p-8 border border-gray-300 rounded-lg shadow-sm text-center m-2 hover:shadow-md"
+    style="flex-basis: 20%;">
+    <img src="{{asset('/resources/images/makeoverlips.png')}}" class="w-16 h-16 mx-auto rounded-lg " />
+    <p class="mt-2 font-medium text-xl">{{ product.product_name }}</p>
+    <p class="mt-2 font-large text-md">Rp.{{ product.pricing }}</p>
+  </a>
+
+  
+  </div>
+
     @endeach
   </div>
+
+
+
+
+
 
   <div class="mt-10 mx-auto border border-gray-300" style="width: 1520px; height: 60px; background-color: #D9D9D9; ">
     <p class="flex flex-wrap justify-center mt-4">YOUR FAVORITE BRANDS</p>

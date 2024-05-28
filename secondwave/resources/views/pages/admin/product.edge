@@ -33,7 +33,8 @@ Product
       </div>
 
       <div>
-        <form action="">
+        <form  method="POST" action="/dashboard" enctype="multipart/form-data">
+          {{csrfField()}}
             <div class="flex w-full ">
                 <div class="w-full">
                     <div class="bg-white w-full p-6 shadow-md rounded-xl">
@@ -42,49 +43,58 @@ Product
                         </p>
 
                         <div class="w-full">
-                            <label for="text" class="block mt-4 mb-2 text-md font-normal text-black ">Product Name</label>
-                            <input type="text" id="text" class="bg-[#EEEEEE] border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 shadow-md" placeholder="Enter Your Product Name" required />
+                            <label for="product_name" class="block mt-4 mb-2 text-md font-normal text-black ">Product Name</label>
+                            <input type="text" id="product_name" name="product_name" class="bg-[#EEEEEE] border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 shadow-md" placeholder="Enter Your Product Name" required />
                         </div>
 
                         <div class="w-full">
-                            <label for="text" class="block mt-8 mb-2 text-md font-normal text-black ">
+                            <label for="product_description" class="block mt-8 mb-2 text-md font-normal text-black ">
                                 Product Description
                             </label>
-                            <textarea id="message" rows="5 " class="block p-2 w-full text-sm text-gray-900 bg-[#EEEEEE] rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 shadow-md" placeholder="Leave a comment...">
-                            </textarea>
+                            <textarea id="product_description" name="product_description" rows="5 " class="block p-2 w-full text-sm text-gray-900 bg-[#EEEEEE] rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 shadow-md" placeholder="Leave a comment..."></textarea>
                         </div>
 
                         <div class="flex justify-between mt-8">
                             <div>
-                                <p for="text" class="block mt-4 mb-2 text-md font-normal text-black ">
+                                <p for="gender" class="block mt-4 mb-2 text-md font-normal text-black ">
                                     Gender
                                 </p>
                                 <div class="flex">
                                     <div class="flex items-center me-4">
-                                        <input id="inline-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                        <input id="inline-radio" type="radio" value="men" name="gender" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                         <label for="inline-radio" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Men</label>
                                     </div>
                                     <div class="flex items-center me-4">
-                                        <input id="inline-2-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                        <input id="inline-2-radio" type="radio" value="woman" name="gender" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                         <label for="inline-2-radio" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Woman</label>
                                     </div>
                                     <div class="flex items-center me-4">
-                                        <input checked id="inline-checked-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                        <input checked id="inline-checked-radio" type="radio" value="unisex" name="gender" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                         <label for="inline-checked-radio" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Unisex</label>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="w-5/12">
-                                <label for="size" class="block mt-4 mb-2 text-md font-normal text-black ">Product Size</label>
-                                <input type="text" id="size" class="bg-[#EEEEEE] border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 shadow-md" placeholder="Enter Your Product Size" required />
+                                <label for="product_size" class="block mt-4 mb-2 text-md font-normal text-black ">Product Size</label>
+                                <input type="text" id="product_size" name="product_size" class="bg-[#EEEEEE] border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 shadow-md" placeholder="Enter Your Product Size" required />
                             </div>
                         </div>
 
-                        <div class="w-full">
-                            <label for="price" class="block mt-4 mb-2 text-md font-normal text-black ">Pricing</label>
-                            <input type="number" name="price" id="price" class="bg-[#EEEEEE] border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 shadow-md" placeholder="Enter Price" required />
+                        <div class="flex">
+                          <div class="w-full mr-24">
+                            <label for="pricing" class="block mt-4 mb-2 text-md font-normal text-black ">Pricing</label>
+                            <input type="number" name="pricing" id="pricing" class="bg-[#EEEEEE] border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 shadow-md" placeholder="Enter Price" required />
                         </div>
+                          <div class="w-full">
+                            <label for="duration" class="block mt-4 mb-2 text-md font-normal text-black ">Duration of Use</label>
+                            <input type="text" name="duration" id="duration" class="bg-[#EEEEEE] border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 shadow-md" placeholder="Enter Your Duration of Use" required />
+                        </div>
+                        </div>
+                        {{--  <div class="w-full">
+                            <label for="pricing" class="block mt-4 mb-2 text-md font-normal text-black ">Pricing</label>
+                            <input type="number" name="pricing" id="pricing" class="bg-[#EEEEEE] border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 shadow-md" placeholder="Enter Price" required />
+                        </div>  --}}
                     </div>
                 </div>
 
@@ -95,8 +105,8 @@ Product
                       </p>
                       <div class="px-4 py-6">
                         <div id="image-preview" class="max-w-sm p-6 mb-4 bg-gray-100 border-dashed border-2 border-gray-400 rounded-lg items-center mx-auto text-center cursor-pointer">
-                          <input id="upload" type="file" class="hidden" accept="image/*" />
-                          <label for="upload" class="cursor-pointer">
+                          <input id="image_url" type="file" name="image_url" class="hidden" accept="image/*" />
+                          <label for="image_url" class="cursor-pointer">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-700 mx-auto mb-4">
                               <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
                             </svg>
@@ -112,7 +122,7 @@ Product
 
                     <div class="bg-white w-full p-6 shadow-md rounded-xl mt-3">
                       <label for="category" class="text-xl text-black font-semibold">Category</label>
-                      <select id="category" class="bg-[#EEEEEE] border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 mt-4">
+                      <select id="category" name="category" class="bg-[#EEEEEE] border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 mt-4">
                     
                         <option>Shoes</option>
                         <option>Clothing</option>
@@ -120,7 +130,10 @@ Product
                         <option>Bags</option>
                         <option>Accessories</option>
                       </select>
+                      
                     </div>
+
+                    
 
                     <div class="mt-4 flex justify-end">
                       <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium shadow-md rounded-lg text-sm w-full sm:w-auto px-5 py-3 text-center">Add Product</button>
@@ -133,7 +146,7 @@ Product
     </div>
 
   <script>
-    const uploadInput = document.getElementById('upload');
+    const uploadInput = document.getElementById('image_url');
     const filenameLabel = document.getElementById('filename');
     const imagePreview = document.getElementById('image-preview');
   

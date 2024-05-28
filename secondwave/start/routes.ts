@@ -51,6 +51,7 @@
 
 import router from '@adonisjs/core/services/router'
 import { middleware } from './kernel.js'
+import ProductsController from '../app/controllers/products_controller.js'
 
 const PagesController = () => import('#controllers/pages_controller')
 const LoginController = () => import('#controllers/auth/login_controller')
@@ -86,13 +87,22 @@ router
     router.get('/account', [PagesController, 'account'])
     router.get('/cart', [PagesController, 'cart'])
     router.get('/checkout', [PagesController, 'checkout'])
-    router.get('/detail', [PagesController, 'detail'])
-    router.get('/home', [PagesController, 'home'])
+    // router.get('/detail', [PagesController, 'detail'])
+    // router.get('/home', [PagesController, 'home'])
     router.get('/order', [PagesController, 'order'])
     router.get('/product', [PagesController, 'product'])
-    router.get('/profile', [PagesController, 'profile'])
-    router.get('/dashboard', [PagesController, 'dashboard'])
+    // router.get('/all', [PagesController, 'all'])
 
+    router.get('/profile', [PagesController, 'profile'])
+    // router.get('/dashboard', [PagesController, 'dashboard'])
+
+    router.post('/dashboard', [ProductsController, 'store']).as('products.store')
+    router.get('/dashboard', [ProductsController, 'index']).as('products.index')
+    router.get('/home', [ProductsController, 'belanja'])
+    router.get('/detail/:id', [ProductsController, 'detail']).as('product.detail')
+    router.get('/all', [ProductsController, 'semua'])
+
+    // router.resource('product', ProductsController)
   })
   .middleware([middleware.auth()])
 
