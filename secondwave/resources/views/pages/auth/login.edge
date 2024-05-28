@@ -4,10 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> SecondWave || Sign In </title>
-
+  <style>
+    .alert {
+      color: red;
+    }
+  </style>
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="bg-black font-primary">
+    @if (flashMessages.get('error'))
+      <div id="alert" class="alert bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4">
+        <div>{{ flashMessages.get('error') }}</div>
+        <button type="button" class="absolute top-0 right-0 mt-1 mr-2 p-2 text-lg" onclick="closeAlert()">&times;</button>
+      </div>
+    @endif
   <section class="flex w-full items-center justify-center mx-auto pl-24">
         <div class="w-1/2 mt-16">
             <div class="flex justify-center items-center my-auto">
@@ -16,13 +26,13 @@
             <div class="mt-6">
                 <p class="text-white text-center text-lg">
                     if you don’t have an account <br>
-                    you can <a href="{{route('/register')}}" class="text-[#49A3AB]"> Register here! </a>
+                    you can <a href="{{route('auth.register.show')}}" class="text-[#49A3AB]"> Register here! </a>
                 </p>
             </div>
         </div>
 
         <div class="mt-16 text-white text-5xl w-1/2">
-            
+
             <div>
                 <p class="font-semibold">
                     Sign In to
@@ -32,14 +42,15 @@
                 </p>
             </div>
 
-            <form class="max-w-md mt-10">
+            <form method="POST" action="{{ route('auth.login.store') }}" class="max-w-md mt-10">
+                {{ csrfField() }}
                 <div class="mb-5">
                     <label for="email"></label>
-                    <input type="email" id="email" class="bg-[#EAF0F7] text-gray-900 text-sm rounded-lg block w-full p-4 " placeholder="Enter Email" required />
+                    <input type="email" name="email" class="bg-[#EAF0F7] text-gray-900 text-sm rounded-lg block w-full p-4 " placeholder="Enter Email" required />
                 </div>
                 <div class="mb-5">
-                    <label for="email"></label>
-                    <select type="email" id="email" class="bg-[#EAF0F7] text-gray-900 text-sm rounded-lg block w-full p-4" required>
+                    <label for="role"></label>
+                    <select name="role" class="bg-[#EAF0F7] text-gray-900 text-sm rounded-lg block w-full p-4" required>
                     <option disabled>Select Role</option>
                     <option>Buyer</option>
                     <option>Seller</option>
@@ -47,7 +58,7 @@
                 </div>
                 <div class="mb-5">
                     <label for="password"></label>
-                    <input type="password" id="password" class="bg-[#EAF0F7] text-gray-900 text-sm rounded-lg block w-full p-4 " placeholder="Enter Password" required />
+                    <input type="password" name="password" class="bg-[#EAF0F7] text-gray-900 text-sm rounded-lg block w-full p-4 " placeholder="Enter Password" required />
                 </div>
 
                 <div class="mb-5">
@@ -56,5 +67,11 @@
             </form>
         </div>
   </section>
+
+  <script>
+    function closeAlert() {
+      document.getElementById('alert').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
